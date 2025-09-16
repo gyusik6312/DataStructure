@@ -9,6 +9,13 @@ typedef struct
 	int* array;
 }ArrayStack;
 
+typedef struct
+{
+	int top;
+	int capacity;
+	int* array;
+}ArrayStack;
+
 ArrayStack* createStack()
 {
 	ArrayStack* s = malloc(sizeof(ArrayStack));
