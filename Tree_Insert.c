@@ -177,7 +177,7 @@ TreeNode* dequeue(queueNode** top)
 	}
 	else
 	{
-		store = (*top) -> Node_Data;
+		store = (*top)->Node_Data;
 		remove = *top;
 		*top = (*top)->next;
 		free(remove);
@@ -199,9 +199,9 @@ void level_print(TreeNode* root)
 		TreeNode* node = dequeue(&q);
 		printf("%d ", node->data);
 
-		if (node->left) 
+		if (node->left)
 			q = enqueue(q, node->left);
-		if (node->right) 
+		if (node->right)
 			q = enqueue(q, node->right);
 	}
 }
